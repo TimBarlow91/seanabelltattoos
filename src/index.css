@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav {
+  backdrop-filter: blur(8px);
+  border-bottom: none;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  /* red glow */
+}
