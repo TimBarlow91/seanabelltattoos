@@ -6,17 +6,28 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-black text-white">
             {/* Hero Section */}
-            <section className="flex flex-col items-center justify-center flex-grow relative bg-gradient-to-b from-black via-red-950 to-black pt-24">
+            <section className="flex flex-col items-center justify-center flex-grow relative bg-gradient-to-b from-black via-red-950 to-black pt-28">
 
                 <div className="absolute inset-0 opacity-10 bg-[url('/tattoo-pattern.png')] bg-cover bg-center"></div>
 
                 <motion.img
                     src="/logo.png"
                     alt="Sean Abell Tattoos Logo"
-                    className="w-56 h-56 md:w-72 md:h-72 mb-6 relative z-10"
+                    className="w-60 h-60 md:w-80 md:h-80 mb-6 relative z-10"
+                    style={{
+                        filter: "drop-shadow(0 0 15px rgba(255,0,0,0.6)) drop-shadow(0 0 10px rgba(0,0,0,0.7))"
+                    }}
                     initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }}
+                    animate={{
+                        opacity: 1,
+                        scale: [0.95, 1.05, 1],
+                        filter: [
+                            "drop-shadow(0 0 10px rgba(255,0,0,0.5)) drop-shadow(0 0 5px rgba(0,0,0,0.5))",
+                            "drop-shadow(0 0 20px rgba(255,0,0,0.7)) drop-shadow(0 0 15px rgba(0,0,0,0.8))",
+                            "drop-shadow(0 0 15px rgba(255,0,0,0.6)) drop-shadow(0 0 10px rgba(0,0,0,0.7))"
+                        ]
+                    }}
+                    transition={{ duration: 2, ease: "easeInOut" }}
                 />
 
                 <motion.h1
