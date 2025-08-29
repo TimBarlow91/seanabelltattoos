@@ -12,8 +12,8 @@ export default function Home() {
                 {/* Logo with 3D pop */}
                 <motion.img
                     src="/logo.png"
-                    alt="Sean Abell Tattoos Logo"
-                    className="w-60 h-60 md:w-80 md:h-80 relative z-10 mb-0" // moved very close
+                    alt="EyeVolution Art Logo"
+                    className="w-60 h-60 md:w-80 md:h-80 relative z-10 mb-0"
                     style={{
                         filter: "drop-shadow(0 0 15px rgba(0,0,0,0.7)) drop-shadow(0 0 10px rgba(255,0,0,0.6))"
                     }}
@@ -29,7 +29,7 @@ export default function Home() {
 
                 {/* Curved Business Name with pulsing shadow */}
                 <motion.svg
-                    className="w-full h-36 md:h-48 relative z-10 -mt-14"
+                    className="w-full h-36 md:h-48 relative z-10 -mt-20 mb-20"
                     viewBox="0 0 500 150"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -38,12 +38,12 @@ export default function Home() {
                     <defs>
                         <path
                             id="curve"
-                            d="M 50 60 Q 250 160 450 60" // more pronounced smile
+                            d="M 50 60 Q 250 160 450 60"
                             fill="transparent"
                         />
                     </defs>
                     <motion.text
-                        fill="#FFD700" // gold color
+                        fill="#FFD700"
                         fontFamily="Splash"
                         fontSize="46"
                         textAnchor="middle"
@@ -55,7 +55,7 @@ export default function Home() {
                             `
                         }}
                         animate={{
-                            scale: [1, 1.03, 1], // subtle pop
+                            scale: [1, 1.03, 1],
                             textShadow: [
                                 "4px 4px 10px rgba(255,0,0,0.85), -4px -4px 10px rgba(0,0,0,0.95)",
                                 "6px 6px 14px rgba(255,0,0,0.9), -6px -6px 14px rgba(0,0,0,1)",
@@ -70,19 +70,25 @@ export default function Home() {
                         }}
                     >
                         <textPath href="#curve" startOffset="50%">
-                            Sean Abell Tattoos
+                            EyeVolution Art
                         </textPath>
                     </motion.text>
                 </motion.svg>
             </section>
 
             {/* Quick Intro */}
-            <section className="py-16 text-center bg-black">
-                <p className="text-lg md:text-xl max-w-2xl mx-auto px-4">
-                    Custom tattoos by Sean Abell — where your story becomes art.
+            <motion.section
+                className="py-16 text-center bg-black max-w-3xl mx-auto px-6 rounded-lg border border-gray-700 shadow-lg"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
+                <p className="text-lg md:text-xl">
+                    EyeVolution Art — where your story becomes art. We offer a 360 approach to creativity with an insistant eye for detail. If we cannot do it we did not try hard enough - therefore we will do it. BECAUSE, it is the small things that count.
                 </p>
                 <div className="w-24 h-1 bg-red-600 mx-auto mt-4 rounded-full"></div>
-            </section>
+            </motion.section>
 
             {/* Call to Action */}
             <section className="py-20 bg-black text-center px-4 sm:px-0">
