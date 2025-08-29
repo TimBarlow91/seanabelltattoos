@@ -10,24 +10,22 @@ export default function Home() {
 
                 <div className="absolute inset-0 opacity-10 bg-[url('/tattoo-pattern.png')] bg-cover bg-center"></div>
 
+                {/* Logo with 3D pop */}
                 <motion.img
                     src="/logo.png"
                     alt="Sean Abell Tattoos Logo"
-                    className="w-60 h-60 md:w-80 md:h-80 mb-6 relative z-10"
+                    className="w-60 h-60 md:w-80 md:h-80 relative z-10 mb-6"
                     style={{
-                        filter: "drop-shadow(0 0 15px rgba(255,0,0,0.6)) drop-shadow(0 0 10px rgba(0,0,0,0.7))"
+                        filter: "drop-shadow(0 0 15px rgba(0,0,0,0.7)) drop-shadow(0 0 10px rgba(255,0,0,0.6))"
                     }}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{
-                        opacity: 1,
-                        scale: [0.95, 1.05, 1],
-                        filter: [
-                            "drop-shadow(0 0 10px rgba(255,0,0,0.5)) drop-shadow(0 0 5px rgba(0,0,0,0.5))",
-                            "drop-shadow(0 0 20px rgba(255,0,0,0.7)) drop-shadow(0 0 15px rgba(0,0,0,0.8))",
-                            "drop-shadow(0 0 15px rgba(255,0,0,0.6)) drop-shadow(0 0 10px rgba(0,0,0,0.7))"
-                        ]
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: [0.95, 1.05, 1] }}
+                    transition={{
+                        duration: 2,
+                        ease: "easeInOut",
+                        loop: Infinity,
+                        repeatType: "mirror"  // ping-pong effect
                     }}
-                    transition={{ duration: 2, ease: "easeInOut" }}
                 />
 
                 <motion.h1
