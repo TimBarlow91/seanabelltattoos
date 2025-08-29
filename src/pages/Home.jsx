@@ -6,13 +6,14 @@ export default function Home() {
     return (
         <div className="flex flex-col min-h-screen bg-black text-white">
             {/* Hero Section */}
-            <section className="flex flex-col items-center justify-center flex-grow relative bg-gradient-to-b from-black via-red-950 to-black">
+            <section className="flex flex-col items-center justify-center flex-grow relative bg-gradient-to-b from-black via-red-950 to-black pt-24">
+
                 <div className="absolute inset-0 opacity-10 bg-[url('/tattoo-pattern.png')] bg-cover bg-center"></div>
 
                 <motion.img
                     src="/logo.png"
                     alt="Sean Abell Tattoos Logo"
-                    className="w-40 h-40 mb-6 relative z-10"
+                    className="w-56 h-56 md:w-72 md:h-72 mb-6 relative z-10"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}
